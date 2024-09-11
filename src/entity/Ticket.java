@@ -1,8 +1,10 @@
-package App;
+package entity;
+
+import feature.Details;
 
 import java.util.UUID;
 
-public class Ticket {
+public class Ticket implements Details {
     private String eventName;
     private String userName;
     private int total;
@@ -15,7 +17,7 @@ public class Ticket {
         this.id = UUID.randomUUID();
     }
 
-    public void printDetails() {
+    public void getDetails() {
         System.out.println("Ticket for event " + eventName);
         System.out.println("Ticket belongs to " + userName);
         System.out.println("Number of ticket " + total);
